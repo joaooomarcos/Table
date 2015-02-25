@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		17BAD2F11A9E418900C5F39D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BAD2F01A9E418900C5F39D /* main.m */; };
 		17BAD2F41A9E418900C5F39D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BAD2F31A9E418900C5F39D /* AppDelegate.m */; };
-		17BAD2F71A9E418900C5F39D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BAD2F61A9E418900C5F39D /* ViewController.m */; };
 		17BAD2FA1A9E418900C5F39D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17BAD2F81A9E418900C5F39D /* Main.storyboard */; };
 		17BAD2FC1A9E418900C5F39D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17BAD2FB1A9E418900C5F39D /* Images.xcassets */; };
 		17BAD2FF1A9E418900C5F39D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17BAD2FD1A9E418900C5F39D /* LaunchScreen.xib */; };
 		17BAD30B1A9E418900C5F39D /* TableTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BAD30A1A9E418900C5F39D /* TableTests.m */; };
+		17BAD3161A9E41EB00C5F39D /* AppTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BAD3151A9E41EB00C5F39D /* AppTableViewController.m */; };
+		17BAD3191A9E425900C5F39D /* AppTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BAD3181A9E425900C5F39D /* AppTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,16 @@
 		17BAD2F01A9E418900C5F39D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17BAD2F21A9E418900C5F39D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		17BAD2F31A9E418900C5F39D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		17BAD2F51A9E418900C5F39D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		17BAD2F61A9E418900C5F39D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		17BAD2F91A9E418900C5F39D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17BAD2FB1A9E418900C5F39D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		17BAD2FE1A9E418900C5F39D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		17BAD3041A9E418900C5F39D /* TableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17BAD3091A9E418900C5F39D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17BAD30A1A9E418900C5F39D /* TableTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableTests.m; sourceTree = "<group>"; };
+		17BAD3141A9E41EB00C5F39D /* AppTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppTableViewController.h; path = ../AppTableViewController.h; sourceTree = "<group>"; };
+		17BAD3151A9E41EB00C5F39D /* AppTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppTableViewController.m; path = ../AppTableViewController.m; sourceTree = "<group>"; };
+		17BAD3171A9E425900C5F39D /* AppTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppTableViewCell.h; path = ../AppTableViewCell.h; sourceTree = "<group>"; };
+		17BAD3181A9E425900C5F39D /* AppTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppTableViewCell.m; path = ../AppTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +86,11 @@
 			children = (
 				17BAD2F21A9E418900C5F39D /* AppDelegate.h */,
 				17BAD2F31A9E418900C5F39D /* AppDelegate.m */,
-				17BAD2F51A9E418900C5F39D /* ViewController.h */,
-				17BAD2F61A9E418900C5F39D /* ViewController.m */,
 				17BAD2F81A9E418900C5F39D /* Main.storyboard */,
+				17BAD3141A9E41EB00C5F39D /* AppTableViewController.h */,
+				17BAD3151A9E41EB00C5F39D /* AppTableViewController.m */,
+				17BAD3171A9E425900C5F39D /* AppTableViewCell.h */,
+				17BAD3181A9E425900C5F39D /* AppTableViewCell.m */,
 				17BAD2FB1A9E418900C5F39D /* Images.xcassets */,
 				17BAD2FD1A9E418900C5F39D /* LaunchScreen.xib */,
 				17BAD2EE1A9E418900C5F39D /* Supporting Files */,
@@ -219,8 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17BAD2F71A9E418900C5F39D /* ViewController.m in Sources */,
 				17BAD2F41A9E418900C5F39D /* AppDelegate.m in Sources */,
+				17BAD3191A9E425900C5F39D /* AppTableViewCell.m in Sources */,
+				17BAD3161A9E41EB00C5F39D /* AppTableViewController.m in Sources */,
 				17BAD2F11A9E418900C5F39D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
