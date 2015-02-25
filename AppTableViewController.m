@@ -7,6 +7,7 @@
 //
 
 #import "AppTableViewController.h"
+#import "AppTableViewCell.h"
 
 @interface AppTableViewController ()
 
@@ -14,8 +15,16 @@
 
 @implementation AppTableViewController
 
+NSMutableArray *nome;
+NSMutableArray *imagem;
+NSMutableArray *categoria;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    nome = [[NSMutableArray alloc] initWithObjects:@"Mudar Fonte", nil];
+    imagem = [[NSMutableArray alloc] initWithObjects:@"1.png", nil];
+    categoria = [[NSMutableArray alloc] initWithObjects:@"Edição", nil];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -32,26 +41,29 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
+//#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
+//#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return nome.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    AppTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AppDetalhes" forIndexPath:indexPath];
+    long row = [indexPath row];
     
-    // Configure the cell...
+    cell.imagem.image = [UIImage imageNamed:[imagem objectAtIndex:row]];
+    cell.nome.text = [nome objectAtIndex:row];
+    cell.categoria.text = [categoria objectAtIndex:row];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
