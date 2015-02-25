@@ -8,6 +8,7 @@
 
 #import "AppTableViewController.h"
 #import "AppTableViewCell.h"
+#import "AppDetalhesViewController.h"
 
 @interface AppTableViewController ()
 
@@ -22,9 +23,9 @@ NSMutableArray *categoria;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    nome = [[NSMutableArray alloc] initWithObjects:@"Mudar Fonte", nil];
-    imagem = [[NSMutableArray alloc] initWithObjects:@"1.png", nil];
-    categoria = [[NSMutableArray alloc] initWithObjects:@"Edição", nil];
+    nome = [[NSMutableArray alloc] initWithObjects:@"Castelo",@"Corrida", @"Email", @"Futebol", @"Musica", @"Letroca", @"Bem Estar", @"Mensagem", @"Calculadora", @"Video", nil];
+    imagem = [[NSMutableArray alloc] initWithObjects:@"castelo.png",@"corrida.png", @"email.png", @"fifa.png", @"itunes.png", @"letroca.png", @"saude.png", @"whats.png", @"wolfran.png", @"youtube.png", nil];
+    categoria = [[NSMutableArray alloc] initWithObjects:@"Educativo",@"Jogos", @"Comunicação", @"Jogos", @"Entreternimento", @"Educativo", @"Saude", @"Comunicação", @"Educativo", @"Entreternimento", nil];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -99,14 +100,22 @@ NSMutableArray *categoria;
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"MostrarDetalhes"]){
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        AppDetalhesViewController *appView = segue.destinationViewController;
+        
+        long row = [indexPath row];
+        NSArray *aux = [NSArray arrayWithObjects:[nome objectAtIndex:row], [categoria objectAtIndex:row], [imagem objectAtIndex:row], nil];
+        appView.dados = aux;
+    }
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 @end
